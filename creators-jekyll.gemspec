@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "creators"
+  spec.name          = "creators-jekyll"
   spec.version       = "0.1.0"
   spec.authors       = ["Obinna Okobgue"]
   spec.email         = ["obinna@okogbue.com"]
