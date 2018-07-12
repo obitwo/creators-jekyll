@@ -1,4 +1,4 @@
-# creator
+# Creators
 
 This is a minialmist Jekyll theme for creators to display projects and other things. This theme is focuses around  a different homepage layout and keeping it simple.
 
