@@ -8,7 +8,8 @@ layout: home
   <div class="menu--site-stats">
     {% for collection in site.collections %}
       <div class="menu__item">
-        <span class="item__stat">{% assign counter = 0 %}{% for item in collection.docs %}{% assign counter=counter | plus:1 %}{% endfor %}{{ counter }}</span>
+        {% assign counter = 0 %}{% for item in collection.docs %}{% assign counter=counter | plus:1 %}{% endfor %}
+        <a href="{{ collection.index_permalink }}" class="item__stat">{{ counter }}</a>
         {{ collection.title }}
       </div>
     {% endfor %}
