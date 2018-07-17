@@ -6,14 +6,12 @@ layout: home
 
 <div class="wrapper">
   <div class="menu--site-stats">
-    <div class="menu__item">
-      <span class="item__stat">1</span>
-      Projects
-    </div>
-    <div class="menu__item">
-      <span class="item__stat">10</span>
-      Posts
-    </div>
+    {% for collection in site.collections %}
+      <div class="menu__item">
+        <span class="item__stat">{% assign counter = 0 %}{% for item in collection.docs %}{% assign counter=counter | plus:1 %}{% endfor %}{{ counter }}</span>
+        {{ collection.title }}
+      </div>
+    {% endfor %}
   </div>
 </div>
 
