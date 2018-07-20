@@ -1,0 +1,19 @@
+---
+layout: collection-index
+---
+
+{% include header.html %}
+
+{% for collection in site.collections %}
+  {% if collection.label == page.collection_name %}
+  <h1 class="collection-title">{{ collection.title }}</h1>
+  <ul>
+    {% for doc in collection.docs %}
+      <li>
+        <a href="{{ doc.url }}">{{ doc.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endfor %}
+{% include footer.html %}
