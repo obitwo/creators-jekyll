@@ -1,0 +1,52 @@
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	position: relative;
+	padding-top: 6rem;
+	padding-bottom: 3rem;
+	line-height: 1.5;
+  font-family: $content-font-family;
+  font-size: $content-font-size;
+	background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $heading-font-family;
+}
+
+p{
+	margin-bottom: $default-padding-size;
+}
+
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a{
+	text-decoration: none;
+	color: $link-font-color;
+	&:hover{
+		color: $link-hover-color;
+	}
+}
+
+code {
+	background-color: $code-background-color;
+}
+
+figure code{
+  @include default-padding;
+	display: block;
+	margin-bottom: $default-padding-size;
+}

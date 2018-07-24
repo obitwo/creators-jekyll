@@ -4,23 +4,25 @@ layout: post
 
 {% include header.html %}
 
-<h1 class="post-header">{{ page.title | escape }}</h1>
-<p class="post-meta">
-	<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-		{{ page.date | date: date_format }}
-	</time>
-	{%- if page.author -%}
-	<span itemprop="author" itemscope itemtype="http://schema.org/Person">
-		<span class="p-author h-card" itemprop="name">
-			{{ page.author }}
+<div class="content">
+	<h1 class="post__title">{{ page.title | escape }}</h1>
+	<p class="post__meta">
+		<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+			{{ page.date | date: date_format }}
+		</time>
+		{%- if page.author -%}
+		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<span class="p-author h-card" itemprop="name">
+				{{ page.author }}
+			</span>
 		</span>
-	</span>
-	{%- endif -%}</p>
-</p>
+		{%- endif -%}</p>
+	</p>
 
-<div class="post-content">
-	{{ content }}
-</div>
+	<div class="post__content">
+		{{ content }}
+	</div>
+<div>
 
 {% include footer.html %}

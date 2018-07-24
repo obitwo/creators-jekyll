@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+$background-color: #FFF;
+$content-font-family: 'Lora', serif;
+$content-font-size: 18px;
+$content-font-color: #444;
+$link-font-color: #888;
+$link-hover-color: #BBB;
+$heading-font-family: 'Lora', serif;
+$title-font-weight: normal;
+
+$default-padding-size: 1.25rem;
+
+$code-background-color: #F4F4F4;
+$code-font-color: #666;
+
+@mixin default-padding {
+  padding: $default-padding-size;
+}
+
+@import
+	"base",
+	"layout"
+;

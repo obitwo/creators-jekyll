@@ -1,9 +1,18 @@
-<header class="site-header" role="banner">
-  <div class="wrapper">
-    <h1 class="header-title">
-      <a href="{{ site.url }}">{{ site.title }}</a>
+<html>
+<head>
+  <title>Creators Theme</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+  <link href="{{ "/assets/main.css" | relative_url }}" rel="stylesheet">
+</head>
+<body>
+<header class="header-container" role="banner">
+  <div class="header">
+    <h1>
+      <a href="{{ site.url }}" class="header__title">
+        {{ site.title }}
+      </a>
     </h1>
-    <h3 class="header-subtitle">
+    <h3 class="header__subtitle">
       {{ site.tagline }}
     </h3>
   </div>

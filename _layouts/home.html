@@ -4,12 +4,12 @@ layout: home
 
 {% include header.html %}
 
-<div class="wrapper">
-  <div class="menu--site-stats">
+<div class="content">
+  <div class="collection__list">
     {% for collection in site.collections %}
-      <div class="menu__item">
+      <div class="collection__item">
         {% assign counter = 0 %}{% for item in collection.docs %}{% assign counter=counter | plus:1 %}{% endfor %}
-        <a href="{{ collection.index_permalink }}" class="item__stat">{{ counter }}</a>
+        <a href="{{ collection.index_permalink }}" class="collection__count">{{ counter }}</a>
         {{ collection.title }}
       </div>
     {% endfor %}

@@ -1,0 +1,19 @@
+---
+layout: posts-index
+---
+
+{% include header.html %}
+
+<div class="content">
+  <h1>{{ page.title }}</h1>
+  <ul>
+    {% for post in site.documents %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% include footer.html %}
+

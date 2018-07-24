@@ -1,0 +1,65 @@
+/* Headings */
+.header-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $background-color;
+}
+.header{
+  @include default-padding;
+	padding-bottom: $default-padding-size * 2;
+  &__title{
+    font-size: .9rem;
+		text-transform: uppercase;
+  }
+  &__subtitle{
+    font-size: .7em;
+    font-weight: normal;
+  }
+}
+
+.content{
+  @include default-padding;
+	max-width: 800px;
+}
+
+.collection{
+	&__title{
+		font-weight: $title-font-weight;
+	}
+	&__count{
+		font-weight: bold;
+	}
+	&__item{
+		font-size: 1.5rem;
+	}
+}
+
+.post{
+	&__title{
+		font-weight: $title-font-weight;
+	}
+	&__meta{
+		margin-bottom: 1rem;
+		font-size: .8rem;
+		text-transform: uppercase;
+	}
+}
+
+.post-list{
+	list-style: none;
+}
+
+.footer-container{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: $background-color;
+}
+.footer{
+  @include default-padding;
+	padding-top: $default-padding-size * 2;
+	font-size: .9rem;
+}
